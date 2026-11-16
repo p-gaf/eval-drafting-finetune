@@ -98,7 +98,7 @@ Quotes were the one check where the fine-tuned model trailed. So I added a quote
 ## Outcome
 
 - The instruction prompt went from about 10,300 tokens to a few hundred.
-- It was the default model for my standard evaluations from October 7, 2026 until October 22, when I switched the local model off in my workflow.
+- It became the default model for my standard evaluations on October 7, 2026.
 
 ## What I took from it
 
