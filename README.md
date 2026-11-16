@@ -41,12 +41,11 @@ Rule-based requirement checks against my final write-up, not similarity metrics.
 - One change at a time. A change is kept only if it helps on the test tasks and nothing else gets worse.
 
 ```mermaid
-flowchart LR
+flowchart TD
     A["About 280 past write-ups<br/>notes in, final out"] --> B["Cleaning scripts<br/>plus 47 hand fixes"]
     B --> C["Split by date<br/>train, validation, held-out test days"]
-    C --> D["SFT with LoRA<br/>prompt masked"]
-    D --> E["Checkpoints"]
-    E --> F["Rule-based checks<br/>3 runs on unseen test days"]
+    C --> D["SFT with LoRA, prompt masked<br/>checkpoints saved during training"]
+    D --> F["Rule-based checks<br/>3 runs on unseen test days"]
     F -->|"better, nothing worse"| K["Keep"]
     F -->|"otherwise"| X["Reject"]
 ```
